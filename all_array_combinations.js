@@ -28,7 +28,7 @@ function allArrayCombinations (array) {
     var currentArrayLength;
     var resultArray = [];
     var resultArrayLength;
-    var tmpArray = [];
+    var tempArray = [];
     var objectForExtending;
     var tempObject;
     var i;
@@ -53,13 +53,13 @@ function allArrayCombinations (array) {
                         tempObject = JSON.parse(JSON.stringify(objectForExtending));
                         tempObject[currentArrayKey] = currentArray[i];
 
-                        tmpArray.push(tempObject);
+                        tempArray.push(tempObject);
                     }
                 }
 
                 //clone array by value
-                resultArray = tmpArray.slice();
-                tmpArray = [];
+                resultArray = tempArray.slice();
+                tempArray = [];
             }
         }
     }
